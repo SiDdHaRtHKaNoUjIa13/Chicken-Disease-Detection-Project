@@ -41,11 +41,12 @@ class PrepareBaseModel:
             outputs=prediction
         )
 
-        full_model.compile(
-            optimizer=tf.keras.optimizers.SGD(learning_rate=learning_rate),
-            loss=tf.keras.losses.CategoricalCrossentropy(),
-            metrics=["accuracy"]
-        )
+        # full_model.compile(
+        #     optimizer=tf.keras.optimizers.SGD(learning_rate=learning_rate),
+        #     loss=tf.keras.losses.CategoricalCrossentropy(),
+        #     metrics=["accuracy"],
+        #     run_eagerly=True
+        # )
 
         full_model.summary()
         return full_model
